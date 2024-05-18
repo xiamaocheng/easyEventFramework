@@ -43,12 +43,42 @@ public class UTest {
             public void onEvent(Event event) {
                 System.out.println("监听器1处理事件：" + event.getType());
             }
+
+            @Override
+            public void entryAdded(Event event) {
+
+            }
+
+            @Override
+            public void entryDeleted(Event event) {
+
+            }
+
+            @Override
+            public void entryModified(Event event) {
+
+            }
         };
 
         IEventListener listener2 = new IEventListener() {
             @Override
             public void onEvent(Event event) {
                 System.out.println("监听器2处理事件：" + event.getType());
+            }
+
+            @Override
+            public void entryAdded(Event event) {
+
+            }
+
+            @Override
+            public void entryDeleted(Event event) {
+
+            }
+
+            @Override
+            public void entryModified(Event event) {
+
             }
         };
 

@@ -1,5 +1,6 @@
-package com.eventframe.demo.framework;
+package com.eventframe.demo.framework.main;
 
+import com.eventframe.demo.framework.*;
 import com.eventframe.demo.framework.excecption.ExceptionHandler;
 
 public class Main {
@@ -17,12 +18,42 @@ public class Main {
             public void onEvent(Event event) {
                 System.out.println(" event 1 style:" + event.getType());
             }
+
+            @Override
+            public void entryAdded(Event event) {
+
+            }
+
+            @Override
+            public void entryDeleted(Event event) {
+
+            }
+
+            @Override
+            public void entryModified(Event event) {
+
+            }
         };
 
         IEventListener listener2 = new IEventListener() {
             @Override
             public void onEvent(Event event) {
                 System.out.println(" event 2 style:" + event.getType());
+            }
+
+            @Override
+            public void entryAdded(Event event) {
+
+            }
+
+            @Override
+            public void entryDeleted(Event event) {
+
+            }
+
+            @Override
+            public void entryModified(Event event) {
+
             }
         };
 

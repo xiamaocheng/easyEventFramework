@@ -8,6 +8,22 @@ public class EventListener  implements  IEventListener{
     public void onEvent(Event event) {
 
     }
+
+    @Override
+    public void entryAdded(Event event) {
+
+    }
+
+    @Override
+    public void entryDeleted(Event event) {
+
+    }
+
+    @Override
+    public void entryModified(Event event) {
+
+    }
+
     private List<EventHandler> eventHandlers;
 
     public EventListener() {
