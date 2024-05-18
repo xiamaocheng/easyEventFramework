@@ -15,6 +15,24 @@ public class Event {
 //        this.name = name;
 //    }
 
+
+    private Object    source;
+    private Object data;
+
+    public Event(Object source, Object data) {
+        this.source = source;
+        this.data = data;
+    }
+
+    public Object getSource() {
+        return source;
+    }
+
+    public Object getData() {
+        return data;
+    }
+
+
     public Event(String type) {
         this.type = type;
     }
