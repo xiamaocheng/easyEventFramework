@@ -3,7 +3,7 @@ package com.eventframe.demo.framework.distribution;
 import com.eventframe.demo.framework.Event;
 import com.eventframe.demo.framework.EventListener;
 import com.eventframe.demo.framework.IEventListener;
-import com.eventframe.demo.framework.PropertyMgr.PropertyMgr;
+import com.eventframe.demo.framework.utils.PropertyMgr;
 
 import java.util.ArrayList;
 

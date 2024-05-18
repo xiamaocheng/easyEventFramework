@@ -1,4 +1,4 @@
-package com.eventframe.demo.framework.PropertyMgr;
+package com.eventframe.demo.framework.utils;
 import java.io.IOException;
 
 import java.util.Properties;
