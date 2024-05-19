@@ -10,10 +10,12 @@ import com.eventframe.demo.framework.filter.MyEventFilter;
 public class Api {
 
 
+    public Api() {
+    }
+
     public static void main(String[] args) {
 
         //定义框架
-//        EventFramework framework  = new EventFramework();
         FrameFactory factory=new FrameFactory();
         EventFramework framework = factory.getEventFrame(null);
 
@@ -40,14 +42,10 @@ public class Api {
             }
         };
 
-
-
         framework.addEventListener("click", listener1);
-
         //添加事件
-        Event clickEvent = new Event("click");
-        Event hoverEvent = new Event("hover");
-
+        Event clickEvent = new Event("1","地震事件");
+        Event hoverEvent = new Event("2","火灾事件");
 
         //2.增加特定类型的事件过滤
         EventFilter filter = new MyEventFilter();
@@ -63,12 +61,10 @@ public class Api {
 
 
         EventListener eventListener = new EventListener();
-
-
         eventListener.addEventHandler(new EventHandler() {
             @Override
             public void handleEvent(Event event) {
-                System.out.println(" 复写处理事件名称event Name:" + event.getName());
+                System.out.println(" 复写处理事件名称event Name=" + event.getName());
             }
         });
 
@@ -76,15 +72,12 @@ public class Api {
         // 模拟异常处理
         ExceptionHandler exceptionHandler = new ExceptionHandler();
         try {
-
             // 添加事件处理器
-        Event event = new Event("ClickEvent");
-        eventListener.notifyEvent(event);
+         eventListener.notifyEvent(clickEvent);
          EventProcessor processor = new EventProcessor();
-
             // 异步处理事件
-            processor.processEvent(event);
-
+            processor.processEvent(clickEvent);
+            processor.processEvent(hoverEvent);
         } catch (ArithmeticException e) {
             exceptionHandler.handleException(e);
         }

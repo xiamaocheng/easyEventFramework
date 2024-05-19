@@ -7,11 +7,11 @@ public class Event {
     public static final int ENTRY_ADDED = 0;
     public static final int ENTRY_DELETED =1 ;
     public static final int ENTRY_MODIFIED = 2;
-    private String type;
+    private String type; //事件类型
 
-    private String name;
+    private String name; //事件名称
 
-    private String  message;
+    private String  message; //事件消息
 
     private Object    source;
     private Object data;
@@ -57,6 +57,11 @@ public class Event {
 
     public Event(String type) {
         this.type = type;
+    }
+
+    public Event(String type, String name) {
+        this.type = type;
+        this.name = name;
     }
 
     public Event(int entryAdded, Entry entry, Object o) {
