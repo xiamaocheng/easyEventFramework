@@ -11,13 +11,35 @@ public class Event {
 
     private String name;
 
-//    public Event(String name) {
+    private String  message;
+
+    private Object    source;
+    private Object data;
+
+
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public void setSource(Object source) {
+        this.source = source;
+    }
+
+    public void setData(Object data) {
+        this.data = data;
+    }
+
+    //    public Event(String name) {
 //        this.name = name;
 //    }
 
 
-    private Object    source;
-    private Object data;
+
 
     public Event(Object source, Object data) {
         this.source = source;
